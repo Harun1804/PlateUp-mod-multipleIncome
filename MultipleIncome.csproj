@@ -44,10 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\EarningBonus.cs" />
     <Compile Include="src\IncomeMultiplierSystem.cs" />
     <Compile Include="src\Main.cs" />
     <Compile Include="src\PreferenceManager.cs" />
     <Compile Include="src\PreferenceWrapper.cs" />
+    <Compile Include="src\References.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="mod.json" />

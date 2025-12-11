@@ -43,7 +43,7 @@ namespace MultipleIncome.src
         {
             if (multiplier > 1 && earnings > 0) {
                 SMoney currentMoney = GetSingleton<SMoney>();
-                int bonus = earnings * (multiplier - 1);
+                int bonus = earnings * multiplier;
 
                 Set<SMoney>(currentMoney + bonus);
 
@@ -54,9 +54,8 @@ namespace MultipleIncome.src
 
         private void TrackMoney(int money)
         {
-            const int FloorBufferStation = 1351951642;
             Entity e = EntityManager.CreateEntity(typeof(CMoneyTrackEvent));
-            EntityManager.SetComponentData(e, new CMoneyTrackEvent { Identifier = FloorBufferStation, Amount = money });
+            EntityManager.SetComponentData(e, new CMoneyTrackEvent { Amount = money });
         }
 
         private void Log(string message)

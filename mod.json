@@ -1,7 +1,7 @@
 {
   "Name": "Multiple Income",
   "Id": "com.harun.multipleincome",
-  "Version": "0.0.1",
+  "Version": "0.0.2",
   "Author": "Harun",
   "Description": "Multiply total earnings at end of day",
   "Assembly": "MultipleIncome.dll",

@@ -19,7 +19,7 @@ namespace MultipleIncome.src
         public void SetupMenu() {
             if (PrefManager != null) {
                 try {
-                    int[] multipleOptions = GetInts(0, 10, 1);
+                    int[] multipleOptions = GetInts(0, 5, 1);
                     string[] multipleLabels = GetLabels(multipleOptions, (d) => {
                         if (d == 0) {
                             return "Disabled";
@@ -30,9 +30,9 @@ namespace MultipleIncome.src
 
                     PreferenceSystemManager manager = (PreferenceSystemManager)PrefManager;
 
-                    manager.AddLabel("Multiplier Bonus Income")
+                    manager.AddLabel("Multiplier Earning Bonus Income")
                         .AddSpacer()
-                        .AddLabel("Multiplier Bonus")
+                        .AddLabel("Multiplier Earning")
                         .AddOption<int>("bonus_multiplier", Convert.ToInt32(PreferenceManager.DefaultPreferences["bonus_multiplier"].Value), multipleOptions, multipleLabels)
                         .AddSpacer()
                         .AddSpacer();
