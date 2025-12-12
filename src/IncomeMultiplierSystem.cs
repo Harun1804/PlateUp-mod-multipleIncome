@@ -55,7 +55,10 @@ namespace MultipleIncome.src
         private void TrackMoney(int money)
         {
             Entity e = EntityManager.CreateEntity(typeof(CMoneyTrackEvent));
-            EntityManager.SetComponentData(e, new CMoneyTrackEvent { Amount = money });
+            EntityManager.SetComponentData(e, new CMoneyTrackEvent { 
+                Amount = money,
+                Identifier = References.EarningBonus.ID
+            });
         }
 
         private void Log(string message)

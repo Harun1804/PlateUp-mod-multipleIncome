@@ -28,9 +28,14 @@ namespace MultipleIncome.src
             };
 
         internal static void Initialize() {
-            if (KitchenMods.ModPreload.Mods.Exists(mod => {
-                return mod.Name == "2949018507" || mod.Name == "PreferenceSystem";
-            })) {
+            string[] KitchenLibModIdLists = new string[] {
+                "2898069883",
+                "KitchenLib",
+                "2949018507",
+                "PreferenceSystem"
+            };
+
+            if (KitchenMods.ModPreload.Mods.Exists(mod => KitchenLibModIdLists.Any(id => id.Equals(mod.Name, StringComparison.OrdinalIgnoreCase)))) {
                 Wrapper = new PreferenceWrapper();
                 Wrapper.SetupMenu();
             }
